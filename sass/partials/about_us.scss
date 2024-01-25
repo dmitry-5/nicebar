@@ -1,0 +1,89 @@
+.about_us{
+	overflow: visible;
+	position: relative;
+	text-align: center;
+	min-height: 616px;
+	.title {
+		position:relative;
+		overflow: hidden;
+		h3{
+			@include title;
+			&:after{
+				@include title-after;
+			}
+		}
+	}
+	ul{
+		position: relative;
+		overflow: visible;
+		margin-top: 40px;
+		li{
+			text-align: left;
+			float: left;
+			width: 540px;
+			margin-bottom: 57px;
+			@include transition($time);
+			&:nth-child(2n){
+				margin-left: 30px;
+				@media (max-width: 1279px) and (min-width: 1024px) {
+					margin-left: 0;
+				}
+				@media (max-width: 1023px) and (min-width: 550px) {
+					margin-left: 0;
+					margin: 0 auto 50px;
+				}
+				@media (max-width: 549px) and (min-width: 320px) {
+					width: 300px;
+					margin-left: 0;
+					margin: 0 auto 30px;
+					float: none;
+				}
+			}
+			&:last-child{
+				margin-bottom: 90px;
+			}
+			&:hover{
+				@include transition($time);
+				@include transform($argument)
+			}
+			@media (max-width: 1279px) and (min-width: 1024px) {
+				width: 450px;
+			}
+			@media (max-width: 1023px) and (min-width: 550px) {
+				display: block;
+				float: none;
+				margin: 0 auto 50px;
+			}
+			@media (max-width: 549px) and (min-width: 320px) {
+				width: 300px;
+				margin-left: 0;
+				margin: 0 auto 30px;
+				float: none;
+			}
+			img{
+				margin-right: 15px;
+				float: left;
+				@media (max-width: 549px) and (min-width: 320px) {
+					padding-bottom: 20px;
+				}
+			}
+			h4{
+				font-size:18px;
+				color: $color-orang;
+				margin-bottom: 18px;
+				text-transform: uppercase;
+				@media (max-width: 549px) and (min-width: 320px) {
+					font-size: 16px;
+				}
+
+			}
+			p{
+				font-size: 18px;
+				color: $color-fond;
+				@media (max-width: 549px) and (min-width: 320px) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

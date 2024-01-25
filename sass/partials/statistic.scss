@@ -1,0 +1,57 @@
+.statistic{
+	display: block;
+	overflow: hidden;
+	background: url("../images/fanfact-BACKGROUND.png") center no-repeat;
+	width: 100%;
+	background-size: cover;
+	background-color: #4e2901;
+	.layout{
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		@media (max-width: 567px) and (min-width: 320px) {
+			flex-direction: column;
+			overflow: hidden;
+			position: relative;
+		}
+		.statistic__inner{
+			background-color: rgba(246, 150, 121, 0.3);
+			float: left;
+			text-align: center;
+			width:350px; 
+			height:300px;
+			@include transition($time);
+			margin-right: 30px;
+			&:last-child{
+				margin-right: 0;
+				@media (max-width: 567px) and (min-width: 320px) {
+					margin: 0 auto;
+				}
+			}
+			&:hover{
+				@include transition($time);
+				background-color: $color-orang;
+			}
+			@media (max-width: 567px) and (min-width: 320px) {
+				width: 310px;
+				margin: 0 auto 20px;
+			}
+			img{
+				margin-top: 68px;
+			}
+			p{
+				font-size: 27px;
+				font-weight: 700;
+				color: #ffffff;
+				text-transform: uppercase;
+				margin: 20px 0 5px 0;
+			}
+			h5{
+				font-size: 27px;
+				color: #ffffff;
+				text-transform: uppercase;
+				margin: 20px 0 5px 0;
+			}
+		}
+	}
+}

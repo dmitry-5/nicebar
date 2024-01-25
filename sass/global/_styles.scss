@@ -1,0 +1,32 @@
+/* wrapper */
+#wrapper {
+	display:block;
+	position:relative;
+	width:100%;
+	height:100%;
+	font-family: $brand-font;
+}
+.layout {
+	margin:0 auto;
+	position:relative;
+	width:1110px;
+	@media (max-width: 1279px) and (min-width: 1024px) {
+		width: 900px;
+	}
+	
+	@media (max-width: 1023px) and (min-width: 812px) {
+		width: 800px;
+	}
+	@media (max-width: 811px) and (min-width: 768px){
+		width: 700px;
+	}
+	@media (max-width: 767px) and (min-width: 320px) {
+		width: 98%;
+	}
+}
+main {
+	display:block;
+	width:100%;
+	position: relative;
+}
+

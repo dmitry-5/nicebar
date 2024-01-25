@@ -1,0 +1,204 @@
+.contacts{
+	display: block;
+	overflow: hidden;
+	.heading{
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+		h3{
+			@include title;
+			&:after{
+				@include title-after;
+			}
+		}
+		p{
+			margin-top:20px;
+			font-size: 14px;
+			color: $color-fond;
+		}
+	}
+	ul{
+		display: flex;
+		justify-content: space-between;
+		margin:65px auto 60px;
+		text-align: center;
+		width: 512px;
+		@media (max-width: 1023px) and (min-width: 568px) {
+			width: 400px;
+		}
+		@media (max-width: 567px) and (min-width: 320px) {
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			margin: 30px auto 30px;
+		}
+
+		li{
+			overflow: visible;
+			text-align: center;
+			position: relative;
+			font-weight: 300;
+			font-size: 14px;
+			@media (max-width: 567px) and (min-width: 320px) {
+				margin-bottom: 30px;
+			}
+
+			a{
+				text-decoration: none;
+				&:hover .social__icon{
+					@include transform($argument);
+					@include transition($time);
+					fill: $color-orang;
+					
+					
+				}
+				.social__icon{
+					@include transition($time);
+					width: 20px;
+					height: 20px;
+					fill: $color-gray;
+					
+				}
+			}
+			
+		}
+		.letter:after{
+			content: 'info.nicebar@gmail.com';
+			position: absolute;
+			bottom: -20px;
+			left: -55px;
+			color: $color-gray;
+		}	
+		.ph:after{
+			content: '+7 937 99 92';
+			position: absolute;
+			width: 100px;
+			bottom: -20px;
+			left: -40px;
+			color: $color-gray;
+		}
+		.twit:after{
+			content: '@nicebarr';
+			position: absolute;
+			width: 100px;
+			bottom: -20px;
+			left: -40px;
+			color: $color-gray;
+		}
+	}
+	form{
+		display: block;
+		position: relative;
+		overflow: visible;
+		font-family: 'Roboto', sans-serif;
+		margin-bottom: 145px;
+		fieldset{
+			position: relative;
+			overflow: visible;
+			width: 732px;
+			margin: 0 auto;
+			@media (max-width: 1023px) and (min-width: 320px) {
+				width: 300px;
+			}
+			.tabl{
+				display: block;
+				overflow: hidden;
+				float: left;
+				width: 352px;
+				margin: 0 auto;
+				@media (max-width: 1023px) and (min-width: 400px) {
+					float: none;
+				}
+				@media (max-width: 399px) and (min-width: 200px) {
+					margin: 0 auto;
+					float: none;
+					width: 300px;
+				}
+				#name{
+					font-size: 14px;
+					border: 1px solid #878787;
+					width: 335px;
+					height: 30px;
+					padding-left: 15px;
+					font-family:$brand-font-2;
+					@media (max-width: 399px) and (min-width: 320px) {
+						width: 280px;
+						margin: 13px auto 0;
+					}
+				}
+				#surname{
+					font-size: 14px;
+					border: 1px solid #878787;
+					width: 335px;
+					height: 30px;
+					margin:13px 0 13px 0;
+					padding-left: 15px;
+					font-family:$brand-font-2;
+					@media (max-width: 399px) and (min-width: 320px) {
+						width: 280px;
+						margin: 13px auto 0;
+					}
+				}
+				#email{
+					font-size: 14px;
+					border: 1px solid #878787;
+					width: 335px;
+					height: 30px;
+					padding-left: 15px;
+					font-family:$brand-font-2;
+					@media (max-width: 399px) and (min-width: 320px) {
+						width: 280px;
+						margin: 13px auto 0;
+					}
+				}
+			}
+			textarea{
+				position: relative;
+				overflow: hidden;
+				font-size: 14px;
+				border: 1px solid #878787;
+				width: 316px;
+				height: 106px;
+				resize: none;
+				margin-left: 28px;
+				padding:14px 0 0 16px;
+				font-family:$brand-font-2;
+				@media (max-width: 1023px) and (min-width: 400px) {
+					margin: 13px auto 0;
+					width: 335px;
+				}
+				@media (max-width: 399px) and (min-width: 320px) {
+					width: 280px;
+					height: 60px;
+					margin: 13px auto 0;
+				}
+			}
+			#in{
+				background-color: $color-orang;
+				width: 115px;
+				height: 35px;
+				background-image: url(../images/icon-SEND.png);
+				background-size: auto;
+				background-position: left;
+				background-repeat: no-repeat;
+				position: absolute;
+				bottom: -65px;
+				left: 50%;
+				transform: translate(-50%);
+				padding-left: 18px;
+				color: #ffffff;
+				border:none;
+				cursor: pointer;
+				font-size: 14px;
+				@include transition($time);
+				border-radius: 5px;
+				&:hover{
+					transform: translate(-50%) scale(1.1, 1.1);  
+					@include transition($time);
+				}
+			}
+			
+		}
+	}
+
+}
